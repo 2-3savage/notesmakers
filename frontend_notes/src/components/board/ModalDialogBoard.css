@@ -1,0 +1,48 @@
+/* modal dialog */
+.modal{
+    cursor: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+    overflow-y: hidden;
+    transition: var(--tran-03);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal_content{
+    min-height: 500px;
+    width: 1000px;
+    position: relative;
+    border-radius: 6px;
+    background-color: var(--sidebar-color);
+    padding: 50px 150px 100px 150px;
+    transform: translateY(-50px);
+    transition: var(--tran-03);
+    
+}
+
+.modal__entering,
+.modal__entered{
+    opacity: 1;
+}
+
+.modal__entering .modal_content,
+.modal__entered .modal_content {
+    transform: translateY(0);
+}
+
+.modal__exiting,
+.modal__exited {
+    opacity: 0;
+}
+
+.modal__exiting .modal_content,
+.modal__exited .modal_content {
+    transform: translateY(-50px);
+}
